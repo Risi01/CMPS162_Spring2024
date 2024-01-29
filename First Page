@@ -23,7 +23,7 @@
 
     <body>
 
-        <img src="/Users/mgajic/Documents/Programming/cmps162git/Module2/Me.jpg" height="100" width="50">
+        <img src="Me.jpg" height="100" width="50">
 
         <h1>My Schedule</h1>
         <table>
@@ -63,9 +63,7 @@
             <li>hanging out with my friends</li>
         </ul>
 
-        <textarea maxlength="15">
-            The thing what I love about programming is to code something and youre able to see what you did. For example you can look at your own website and everytime youre changing the code the website is changing
-        </textarea>
+        <p>The thing what I love about programming is to code something and youre able to see what you did. For example you can look at your own website and everytime youre changing the code the website is changing</p>
 
     </body>
 </html>
