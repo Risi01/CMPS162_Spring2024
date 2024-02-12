@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Maurice Gajic</title>
+        
+
+        <style>
+            table{
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+                td, th{
+                    border: 1px solid #dddddd;
+                    text-align: left;
+                    padding: 8px;
+            }
+            tr:nth-child(even){
+                background-color: #dddddd;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <img src="Me.jpg" height="100" width="50">
+
+        <h1>My Schedule</h1>
+        <table>
+            <tr>
+                <th>Class</th>
+                <td>Introduction to Business</td>
+                <td>Business Law 1</td>
+                <td>Introduction to Programming</td>
+                <td>Business Analytics</td>
+                <td>Elementary Sttistics</td>
+                <td>Principles of Marketing and sales</td>
+            </tr>
+            <tr>
+                <th>Day</th>
+                <td>Monday/Wedensday</td>
+                <td>Tuesday/Thursday</td>
+                <td>Monday</td>
+                <td>Wednesday</td>
+                <td>Tuesday/Thursday</td>
+                <td>Tuesday/Thursday</td>
+            </tr>
+            <tr>
+                <th>Time</th>
+                <td>1:00PM-2:30PM</td>
+                <td>2:40PM-4:10PM</td>
+                <td>6:00PM-9:15PM</td>
+                <td>6:00PM-9:00PM</td>
+                <td>1:00PM-2:30PM</td>
+                <td>11:20AM-12:50PM</td>
+            </tr>
+        </table>
+
+        <h2>My Hobbies outside of school</h2>
+        <ul>
+            <li>soccer</li>
+            <li>overall doing sports/working out</li>
+            <li>hanging out with my friends</li>
+        </ul>
+
+        <p>The thing what I love about programming is to code something and youre able to see what you did. For example you can look at your own website and everytime youre changing the code the website is changing</p>
+
+    </body>
+</html>
