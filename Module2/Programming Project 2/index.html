@@ -21,12 +21,14 @@
 prompt(variablename);
 
 // 1. Create a string variable that uses a prompt that asks the customer for his/her name
-var customerName = prompt("Please enter your name;");
+    //Response: Do not need the ; before " but it works.
+var customerName = prompt("Please enter your name;");  
 
 // 2. Write the value from #1 in the Console
 console.log(customerName);
 
 // 3. Create a conditional statement that validates if the user has not input a name from #1, provide an alternate message.
+    //Don't need ! in front of the variable. It's a special character and is forbidden. The rest is fine.
 if(!customerName) {
     console.log("You did not enter a name.");
 } else {
@@ -44,7 +46,7 @@ console.log("Values");
 //1. Take "23" and " Michael Jordan" and concatenate the strings together to create one
 var numberString = "23";
 var playerName = " Michael Jordan";
-var resultString = numberString +playerName;
+var resultString = numberString +playerName;  // Want to add a space in between numberString + " " + playerName
 console.log(resultString);
 
 //2. Create a concatenate string , and with the first input as "Hello" & second input as "Your name", but use a prompt to input your name
