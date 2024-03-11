@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CMPS 162: Module 5 Programming Project</title>
+<style>
+* { font-family: monospace; }
+</style>
+<script>
+
+</script>
+</head>
+<body>
+  
+  <a href="#" onclick="alert('Hello, welcome!')">Click here for a greeting!</a><br><br>
+ 
+  <input type="text" value="Type here"
+    onfocus="this.style.backgroundColor = 'red';"
+    onblur="this.style.backgroundColor = 'white';"
+    oninput="this.style.color = 'blue';"><br><br>
+  
+  <img src="/Volumes/GADGET/Lionel_Messi.jpg" alt="Clickable Image" onclick="this.style.display='none';">
+
+  <img src="/Volumes/GADGET/Lionel_Messi.jpg" alt="Swappable Image" onmouseover="this.src='/Volumes/GADGET/Schule/Programming/MESSI.jpg';" onmouseout="this.src='/Volumes/GADGET/Lionel_Messi.jpg';">
+  
+  <script>
+    swapImage(document.getElementById('swapImage'), '/Volumes/GADGET/Lionel_Messi.jpg', '/Volumes/GADGET/Schule/Programming/MESSI.jpg');
+ </script>
+
+  <p style="font-size: 8em;">The Pirates will advance to the World Series in 2025</p>
+  <p style="font-size: 5em;">The Pirates will advance to the World Series in 2025</p>
+  <div id="div1"
+       style="background-color:yellow;"
+       onclick="swapColors();">
+    Hello
+  </div>
+  <div id="div2"
+       style="background-color:green;"
+       onclick="swapColors();">
+    World
+  </div>
+</body>
+</html>
