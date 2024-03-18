@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+</head>
+<body>
+    <button onclick="setCookie()">Set Cookie</button>
+    <button onclick="openNewWindow()">Open Window</button>
+    <button onclick="closeWindow()">Close Window</button>
+    <button onclick="checkGPS()">GPS Available</button>
+    <button onclick="getCoordinates()">GPS Coordinates</button>
+    <p id="cookieDisplay"></p>
+    <p id="gpsAvailability"></p>
+    <p id="coordinatesDisplay"></p>
+
+    <script>
+        function setCookie() {
+            var cookieName = prompt("Enter cookie name:");
+            var cookieValue = "exampleCookieValue"; // You can set any default value here
+            document.cookie = cookieName + "=" + cookieValue + ";";
+            document.getElementById("cookieDisplay").innerText = "Cookie set: " + document.cookie;
+        }
+
+        function openNewWindow() {
+            window.open("https://www.example.com");
+        }
+
+        function closeWindow() {
+            window.close();
+        }
+
+        function checkGPS() {
+            if ("geolocation" in navigator) {
+                document.getElementById("gpsAvailability").innerText = "GPS is available.";
+            } else {
+                document.getElementById("gpsAvailability").innerText = "GPS is not available.";
+            }
+        }
+
+        function getCoordinates() {
+            if ("geolocation" in navigator) {
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    document.getElementById("coordinatesDisplay").innerText = "Latitude: " + position.coords.latitude + ", Longitude: " + position.coords.longitude;
+                });
+            } else {
+                document.getElementById("coordinatesDisplay").innerText = "GPS coordinates not available.";
+            }
+        }
+    </script>
+</body>
+</html>
