@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<head>
+<title>Form Validation</title>
+<style>
+  .error {
+    color: red;
+  }
+</style>
+</head>
+<body>
+  <form id="myForm">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name"><br>
+    <span id="nameError" class="error"></span><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email"><br>
+    <span id="emailError" class="error"></span><br>
+
+    <label for="city">City:</label><br>
+    <input type="text" id="city" name="city"><br>
+    <span id="cityError" class="error"></span><br>
+
+    <label for="state">State:</label><br>
+    <input type="text" id="state" name="state"><br>
+    <span id="stateError" class="error"></span><br>
+
+    <label for="phone">Phone Number:</label><br>
+    <input type="tel" id="phone" name="phone"><br>
+    <span id="phoneError" class="error"></span><br>
+
+    <label for="occupation">Occupation:</label><br>
+    <input type="text" id="occupation" name="occupation"><br>
+    <span id="occupationError" class="error"></span><br>
+
+    <button type="button" onclick="validateForm()">Submit</button>
+  </form>
+
+  <script>
+    function validateForm() {
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const city = document.getElementById("city").value;
+      const state = document.getElementById("state").value;
+      const phone = document.getElementById("phone").value;
+      const occupation = document.getElementById("occupation").value;
+
+      const nameError = document.getElementById("nameError");
+      const emailError = document.getElementById("emailError");
+      const cityError = document.getElementById("cityError");
+      const stateError = document.getElementById("stateError");
+      const phoneError = document.getElementById("phoneError");
+      const occupationError = document.getElementById("occupationError");
+
+      const namePattern = /^[a-zA-Z\s]+$/;
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const phonePattern = /^\d+$/;
+
+      nameError.textContent = "";
+      emailError.textContent = "";
+      cityError.textContent = "";
+      stateError.textContent = "";
+      phoneError.textContent = "";
+      occupationError.textContent = "";
+
+      if (!name.match(namePattern)) {
+        nameError.textContent = "Name must contain only letters and spaces.";
+        document.getElementById("name").style.backgroundColor = "pink";
+      }
+      if (!email.match(emailPattern)) {
+        emailError.textContent = "Invalid email address.";
+        document.getElementById("email").style.backgroundColor = "pink";
+      }
+      if (city.trim() === "") {
+        cityError.textContent = "City field cannot be empty.";
+        document.getElementById("city").style.backgroundColor = "pink";
+      }
+      if (state.trim() === "") {
+        stateError.textContent = "State field cannot be empty.";
+        document.getElementById("state").style.backgroundColor = "pink";
+      }
+      if (!phone.match(phonePattern)) {
+        phoneError.textContent = "Phone number must contain only numbers.";
+        document.getElementById("phone").style.backgroundColor = "pink";
+      }
+      if (occupation.trim() === "") {
+        occupationError.textContent = "Occupation field cannot be empty.";
+        document.getElementById("occupation").style.backgroundColor = "pink";
+      }
+    }
+  </script>
+</body>
+</html>
