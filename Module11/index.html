@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notification Demo</title>
+<style>
+  .notification {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    margin-right: 10px;
+  }
+
+  #customButton {
+    display: none; /* Initially hidden */
+  }
+</style>
+</head>
+<body>
+
+<div class="notification">
+  <p class="message">Today is a nice day, go outside!</p>
+  <button id="showNotification">Show Notification</button>
+  <button id="customButton">See Notification</button>
+</div>
+
+<script>
+  document.getElementById('showNotification').addEventListener('click', function() {
+    document.querySelector('.notification').style.display = 'block';
+  });
+
+  document.getElementById('customButton').addEventListener('click', function() {
+    var customMessage = prompt("Enter your custom message:");
+    if (customMessage !== null) {
+      document.querySelector('.message').innerText = customMessage;
+    }
+  });
+</script>
+
+</body>
+</html>
